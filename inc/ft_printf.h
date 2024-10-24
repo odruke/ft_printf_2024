@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:09:07 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/21 00:49:17 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:42:48 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_flags
 	int	hex_prefix;
 	int	precision;
 	int	width;
-} t_flags;
+}	t_flags;
 
 void	ft_flags(t_flags *flags, const char *str, int *index);
 void	flag_init(t_flags *flags);
@@ -41,10 +41,9 @@ int		ft_printstr(char *str, t_flags flags);
 int		padding(t_flags *flags, int input_len);
 int		padding_nbr(t_flags *flags, int input_len);
 int		ft_printhex(unsigned int n, const char format, t_flags flags);
-int		ft_printnbr(int	n, t_flags flags);
+int		ft_printnbr(int n, t_flags flags);
 int		ft_printptr(unsigned long long ptr, t_flags flags);
 int		ft_printunsigned(unsigned int n, t_flags flags);
 int		ft_printf(const char *str, ...);
 
 #endif
-

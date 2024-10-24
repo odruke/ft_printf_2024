@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 20:25:02 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/20 19:55:05 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:52:43 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	flag_init(t_flags *flags)
 {
-		flags->align = 0;
-		flags->zero_pad = 0;
-		flags->force_sign = 0;
-		flags->space_sign = 0;
-		flags->hex_prefix = 0;
-		flags->width = 0;
-		flags->precision = -1;
+	flags->align = 0;
+	flags->zero_pad = 0;
+	flags->force_sign = 0;
+	flags->space_sign = 0;
+	flags->hex_prefix = 0;
+	flags->width = 0;
+	flags->precision = -1;
 }
 
 void	ft_precision_flags(t_flags **flags, const char *str, int *index)

@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 21:04:01 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/23 00:09:56 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:47:22 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,6 @@ int	padding_nbr(t_flags *flags, int input_len)
 		pad = '0';
 	if (flags->force_sign || flags->space_sign)
 		flags->width -= 1;
-//	if (flags->width < 0)
-//	{
-//		flags->width *= - 1;
-//		flags->align = 1;
-//	}
 	while (flags->width >= 0 && flags->width > (int)input_len)
 	{
 		len += ft_printchar(pad);

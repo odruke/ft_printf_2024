@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 20:06:13 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/20 15:37:38 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:47:50 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ptr_len(unsigned long long n)
 	len = 0;
 	if (n == 0)
 		return (1);
-	while(n > 0)
+	while (n > 0)
 	{
 		len++;
 		n /= 16;
@@ -51,6 +51,7 @@ static void	ft_putptr(unsigned long long n)
 int	ft_printptr(unsigned long long ptr, t_flags flags)
 {
 	int	len;
+
 	flags.zero_pad = 0;
 	if (!ptr)
 	{

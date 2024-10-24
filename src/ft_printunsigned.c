@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 20:54:40 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/20 20:00:06 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:52:01 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	num_len(unsigned int n)
 	int	len;
 
 	len = 0;
-	if	(n == 0)
+	if (n == 0)
 		return (1);
 	while (n > 0)
 	{
@@ -39,7 +39,6 @@ static char	*ft_uitoa(unsigned int n)
 	num[len--] = '\0';
 	if (n == 0)
 		num[len] = (n % 10) + 48;
-
 	while (n > 0)
 	{
 		num[len] = (n % 10) + 48;
@@ -52,7 +51,7 @@ static char	*ft_uitoa(unsigned int n)
 int	ft_printunsigned(unsigned int n, t_flags flags)
 {
 	int		len;
-	char 	*num;
+	char	*num;
 
 	len = num_len(n);
 	num = ft_uitoa(n);

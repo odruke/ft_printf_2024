@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:21:40 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/22 01:11:59 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:00:46 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int	check_plh(const char *c)
 	if (*c == '%' && (ft_strchr(FORMAT_LIST, c[i])))
 	{
 		while (*c == '%' && (ft_strchr(FORMAT_LIST, c[i])))
-				i++;
+			i++;
 		if (*c == '%' && c[i] && ft_strchr(PLH_LIST, c[i]))
 			return (2);
 	}
@@ -66,7 +66,7 @@ static int	ft_process(va_list args, const char *str, int *index)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
+	va_list	args;
 	t_flags	flags;
 	int		len;
 	int		index;
@@ -77,7 +77,7 @@ int	ft_printf(const char *str, ...)
 	flag_init(&flags);
 	if (!str)
 		return (0);
-	while(str[++index])
+	while (str[++index])
 	{
 		if (!check_plh(&str[index]))
 			len += ft_printchar(str[index]);

@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 20:17:47 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/22 23:51:36 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:45:57 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	hex_len(unsigned int n)
 	len = 0;
 	if (n == 0)
 		return (1);
-	while(n > 0)
+	while (n > 0)
 	{
 		len++;
 		n /= 16;
@@ -66,6 +66,7 @@ static void	ft_puthex(unsigned int n, const char format)
 		}
 	}
 }
+
 static int	ft_prefix(unsigned int n, const char format)
 {
 	if (n > 0)
@@ -79,6 +80,7 @@ static int	ft_prefix(unsigned int n, const char format)
 	else
 		return (0);
 }
+
 int	ft_printhex(unsigned int n, const char format, t_flags flags)
 {
 	int	len;

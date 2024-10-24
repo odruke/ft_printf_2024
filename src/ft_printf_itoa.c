@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 16:16:26 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/21 23:42:58 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/24 12:44:57 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ static void	ft_process_precision(int len, t_flags *flags)
 	flags->precision -= len;
 	if (flags->precision < 0)
 		flags->precision = 0;
-//	else
-//		flags->precision += neg;
 }
 
 static int	ft_nlen(int n, t_flags *flags)
@@ -65,7 +63,7 @@ static char	*minint(char *res, int len, t_flags *flags)
 }
 
 static void	ft_process_res(char *res, int n, int len, t_flags *flags)
-{	
+{
 	if (n < 0)
 		n *= -1;
 	res[len--] = '\0';
