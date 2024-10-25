@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 20:25:02 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/24 12:52:43 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:08:50 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	flag_init(t_flags *flags)
 	flags->precision = -1;
 }
 
-void	ft_precision_flags(t_flags **flags, const char *str, int *index)
+void	ft_precision_flags(t_flags *flags, const char *str, int *index)
 {
 	(*index) += 1;
-	(*flags)->precision = ft_atoi(&str[(*index)]);
+	flags->precision = ft_atoi(&str[(*index)]);
 	while (ft_isdigit(str[(*index)]))
 		(*index)++;
 }
@@ -55,5 +55,5 @@ void	ft_flags(t_flags *flags, const char *str, int *index)
 			(*index)++;
 	}
 	if (str[*index] == '.')
-		ft_precision_flags(&flags, str, index);
+		ft_precision_flags(flags, str, index);
 }

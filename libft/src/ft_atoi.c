@@ -6,7 +6,7 @@
 /*   By: odruke-s <odruke-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:41:16 by odruke-s          #+#    #+#             */
-/*   Updated: 2024/10/02 10:03:48 by odruke-s         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:13:46 by odruke-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *nb)
 	res = 0;
 	sign = 1;
 	i = 0;
+	if (nb[0] == '0')
+		return (0);
 	while (nb[i] == 32 || (nb[i] >= 9 && nb[i] <= 13))
 		i++;
 	if (nb[i] == '-' || nb[i] == '+')
